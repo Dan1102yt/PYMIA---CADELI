@@ -1,0 +1,16 @@
+export const OPERATORS = [
+  { id: 1, name: 'Carlos Andrés Moreno', role: 'Operario Prensas', initials: 'CM' },
+  { id: 2, name: 'Juan Pablo Rodríguez', role: 'Operario Mezcladora', initials: 'JR' },
+  { id: 3, name: 'Luis Felipe Martínez', role: 'Operario Laminadoras', initials: 'LM' },
+  { id: 4, name: 'Andrés Fernando García', role: 'Operario Extrusora', initials: 'AG' },
+  { id: 5, name: 'Jorge Iván Pérez', role: 'Operario Autoclave', initials: 'JP' },
+  { id: 6, name: 'Diego Alejandro Torres', role: 'Operario Moldes', initials: 'DT' },
+  { id: 7, name: 'Fabio Ernesto Gómez', role: 'Técnico Mantenimiento', initials: 'FG' },
+  { id: 8, name: 'Héctor Manuel López', role: 'Técnico Mantenimiento', initials: 'HL' },
+  { id: 9, name: 'Mario Alberto Sánchez', role: 'Operario Prensas', initials: 'MS' },
+  { id: 10, name: 'Roberto Carlos Díaz', role: 'Operario Compresor', initials: 'RD' },
+  { id: 11, name: 'Óscar Darío Herrera', role: 'Auxiliar Producción', initials: 'OH' },
+  { id: 12, name: 'Camilo Augusto Vargas', role: 'Auxiliar Producción', initials: 'CV' },
+  { id: 13, name: 'William Javier Castro', role: 'Inspector Calidad', initials: 'WC' },
+  { id: 14, name: 'Édgar Alfonso Ruiz', role: 'Jefe Producción', initials: 'ER' },
+]

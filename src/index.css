@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-cadeli-gray text-gray-800 font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-cadeli-border;
+  }
+  .btn-primary {
+    @apply bg-cadeli-blue hover:bg-navy-dark text-white font-semibold px-4 py-2 rounded-xl transition-colors duration-150;
+  }
+  .btn-secondary {
+    @apply bg-cadeli-gray hover:bg-cadeli-border text-cadeli-blue font-semibold px-4 py-2 rounded-xl transition-colors duration-150;
+  }
+  .badge-green {
+    @apply inline-flex items-center gap-1 bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-yellow {
+    @apply inline-flex items-center gap-1 bg-amber-100 text-amber-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-red {
+    @apply inline-flex items-center gap-1 bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+  .badge-blue {
+    @apply inline-flex items-center gap-1 bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cadeli-gray;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-cadeli-border rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Animación de pulso para alertas */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
