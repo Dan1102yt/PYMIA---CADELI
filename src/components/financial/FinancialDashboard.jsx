@@ -5,6 +5,7 @@ import RevenueChart from './RevenueChart'
 import ExpenseChart from './ExpenseChart'
 import ReceiptUploader from './ReceiptUploader'
 import ExpenseTable from './ExpenseTable'
+import FinancialAlerts from './FinancialAlerts'
 import { MONTHLY_DATA, EXPENSE_RECORDS, TOTALS, formatCOP, formatCOPFull } from '../../data/financialData'
 
 const lastMonth = MONTHLY_DATA[MONTHLY_DATA.length - 1]
@@ -90,6 +91,9 @@ export default function FinancialDashboard() {
         </div>
         <ExpenseChart />
       </div>
+
+      {/* Señales de advertencia */}
+      <FinancialAlerts />
 
       {/* Registrar egreso y tabla */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
