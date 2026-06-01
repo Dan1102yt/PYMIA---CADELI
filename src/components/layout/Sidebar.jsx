@@ -1,4 +1,4 @@
-import { BarChart3, Wrench, Bot, ChevronLeft, ChevronRight } from 'lucide-react'
+import { BarChart3, Wrench, Bot, ChevronLeft, ChevronRight, LogOut } from 'lucide-react'
 import { useState } from 'react'
 import CadeliLogo from './CadeliLogo'
 
@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { id: 'asistente', label: 'Asistente IA', icon: Bot },
 ]
 
-export default function Sidebar({ current, onChange }) {
+export default function Sidebar({ current, onChange, onLogout }) {
   const [collapsed, setCollapsed] = useState(false)
 
   return (
@@ -53,14 +53,22 @@ export default function Sidebar({ current, onChange }) {
       </nav>
 
       {/* Footer */}
-      <div className={`px-4 py-4 border-t border-blue-700/40 ${collapsed ? 'text-center' : ''}`}>
-        {!collapsed ? (
+      <div className={`px-4 py-4 border-t border-blue-700/40 space-y-3 ${collapsed ? 'text-center' : ''}`}>
+        {!collapsed && (
           <div className="text-blue-300/60 text-[10px] font-medium leading-relaxed">
             Panel de Control<br />v1.0 · 2026
           </div>
-        ) : (
-          <div className="text-blue-300/60 text-[10px]">v1.0</div>
         )}
+        <button
+          onClick={onLogout}
+          title="Cerrar sesión"
+          className={`flex items-center gap-2 w-full px-3 py-2 rounded-xl text-sm font-medium text-blue-200 hover:bg-blue-700/40 hover:text-white transition-colors ${
+            collapsed ? 'justify-center' : ''
+          }`}
+        >
+          <LogOut size={16} className="flex-shrink-0" />
+          {!collapsed && <span>Cerrar sesión</span>}
+        </button>
       </div>
     </aside>
   )
